@@ -8,7 +8,7 @@ inputs:
 outputs:
   used-cache:
     description: 'Whether the cache was used'
-    value: ${{ steps.install-dependencies.cache }}
+    value: 'false'
 runs:
   using: 'composite'
   steps:
