@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get code
-        uses: actions/checkout@v
+        uses: actions/checkout@v4
       - name: Load or cache dependencies
         id: cache-deps
         uses: ./.github/actions/cached-deps
@@ -64,3 +64,8 @@ jobs:
         run: ls
       - name: Deploy site
         run: echo "Deploying..."
+  information:
+    runs-on: ubuntu-latest
+    steps:
+      - name: My JavaScript custom action
+        uses: ./.github/actions/deploy-s3-javascript
